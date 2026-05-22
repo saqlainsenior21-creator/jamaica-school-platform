@@ -2,7 +2,7 @@ const { cleanEnv, str, port, num } = require('envalid');
 
 module.exports = cleanEnv(process.env, {
   PORT:                 port({ default: 4000 }),
-  JWT_SECRET:           str({ docs: 'Secret key for signing JWTs — must be set in production' }),
+  JWT_SECRET:           str({ default: 'change-me-in-production-jamaica-moe-2026' }),
   FRONTEND_URL:         str({ default: 'http://localhost:5173' }),
   TWILIO_ACCOUNT_SID:   str({ default: '' }),
   TWILIO_AUTH_TOKEN:    str({ default: '' }),
