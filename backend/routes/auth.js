@@ -70,4 +70,18 @@ router.get('/users', auth, (req, res) => {
   res.json(users);
 });
 
+// POST /api/auth/change-password
+router.post('/change-password', auth, (req, res) => {
+  const { current_password, new_password } = req.body;
+  if (!current_password || !new_password) return res.status(400).json({ error: 'current_password and new_password required' });
+  if (new_password.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters' });
+
+  const user = db.prepare('SELECT * FROM users WHERE id = ?').get(req.user.id);
+  if (!bcrypt.compareSync(current_password, user.password)) return res.status(401).json({ error: 'Current password is incorrect' });
+
+  const hash = bcrypt.hashSync(new_password, 10);
+  db.prepare('UPDATE users SET password = ? WHERE id = ?').run(hash, req.user.id);
+  res.json({ success: true });
+});
+
 module.exports = router;
