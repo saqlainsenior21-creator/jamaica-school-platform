@@ -70,6 +70,17 @@ router.get('/users', auth, (req, res) => {
   res.json(users);
 });
 
+// POST /api/auth/reset-admin  — one-time reset, requires RESET_TOKEN env var
+router.post('/reset-admin', (req, res) => {
+  const { reset_token, new_password } = req.body;
+  const expected = process.env.RESET_TOKEN;
+  if (!expected || reset_token !== expected) return res.status(403).json({ error: 'Forbidden' });
+  if (!new_password || new_password.length < 8) return res.status(400).json({ error: 'Password too short' });
+  const hash = bcrypt.hashSync(new_password, 10);
+  db.prepare("UPDATE users SET password = ? WHERE role = 'moe_admin'").run(hash);
+  res.json({ success: true });
+});
+
 // POST /api/auth/change-password
 router.post('/change-password', auth, (req, res) => {
   const { current_password, new_password } = req.body;
