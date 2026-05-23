@@ -96,12 +96,6 @@ export default function Login() {
           </button>
         </form>
 
-        <div style={{
-          marginTop: 24, padding: 12, background: '#f9fafb', borderRadius: 8,
-          fontSize: 12, color: '#6b7280', textAlign: 'center'
-        }}>
-          Default: admin@moe.gov.jm / Admin2026!
-        </div>
       </div>
     </div>
   )
