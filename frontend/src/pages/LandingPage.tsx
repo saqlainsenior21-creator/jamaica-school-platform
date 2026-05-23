@@ -288,7 +288,12 @@ export default function LandingPage() {
         <div style={{ marginBottom: 8 }}>
           <span style={{ fontWeight: 700, color: '#fff' }}>SchoolTrack JM</span> — Jamaica Ministry of Education School Management Platform
         </div>
-        <div>© {new Date().getFullYear()} All rights reserved · <button onClick={() => navigate('/login')} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 13, padding: 0 }}>School Login</button></div>
+        <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <span>© {new Date().getFullYear()} SchoolTrack JM Ltd</span>
+          <button onClick={() => navigate('/login')} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 13, padding: 0 }}>School Login</button>
+          <button onClick={() => navigate('/privacy')} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 13, padding: 0 }}>Privacy Policy</button>
+          <button onClick={() => navigate('/terms')} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 13, padding: 0 }}>Terms of Service</button>
+        </div>
       </footer>
 
     </div>

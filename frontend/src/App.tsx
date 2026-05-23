@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './AuthContext'
 import Login from './pages/Login'
 import LandingPage from './pages/LandingPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 import Layout from './components/Layout'
 import MOEDashboard from './pages/MOEDashboard'
 import SchoolDashboard from './pages/SchoolDashboard'
@@ -32,6 +34,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/" element={<HomeRedirect />} />
           <Route element={<RequireAuth><Layout /></RequireAuth>}>
             <Route path="/moe"        element={<MOEDashboard />} />
