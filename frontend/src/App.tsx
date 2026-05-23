@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './AuthContext'
 import Login from './pages/Login'
+import LandingPage from './pages/LandingPage'
 import Layout from './components/Layout'
 import MOEDashboard from './pages/MOEDashboard'
 import SchoolDashboard from './pages/SchoolDashboard'
@@ -19,7 +20,7 @@ function RequireAuth({ children }: { children: React.ReactNode }) {
 
 function HomeRedirect() {
   const { user } = useAuth()
-  if (!user) return <Navigate to="/login" replace />
+  if (!user) return <LandingPage />
   if (user.role === 'moe_admin') return <Navigate to="/moe" replace />
   if (user.role === 'parent')    return <Navigate to="/parent" replace />
   return <Navigate to="/dashboard" replace />
