@@ -97,7 +97,7 @@ Upon termination, data export requests must be submitted within 30 days.`
             title: '11. Contact',
             body: `SchoolTrack JM Ltd
 Black River, St. Elizabeth, Jamaica
-Email: damian@schooltrackjm.com
+Email: saqlain@schooltrackjm.com
 WhatsApp: +1 (876) 875-1969`
           },
         ].map(section => (

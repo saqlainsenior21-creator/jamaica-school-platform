@@ -92,7 +92,7 @@ Audit logs are retained for 2 years. User accounts are deactivated upon staff de
 • Object to processing of your personal data
 • Lodge a complaint with the Office of the Information Commissioner of Jamaica
 
-To exercise any of these rights, contact us at: damian@schooltrackjm.com`
+To exercise any of these rights, contact us at: saqlain@schooltrackjm.com`
           },
           {
             title: '9. Children\'s Privacy',
@@ -104,7 +104,7 @@ To exercise any of these rights, contact us at: damian@schooltrackjm.com`
 
 SchoolTrack JM Ltd
 Black River, St. Elizabeth, Jamaica
-Email: damian@schooltrackjm.com
+Email: saqlain@schooltrackjm.com
 WhatsApp: +1 (876) 875-1969`
           },
         ].map(section => (

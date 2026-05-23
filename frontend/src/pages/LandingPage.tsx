@@ -268,7 +268,7 @@ export default function LandingPage() {
             }}>
               <span style={{ fontSize: 24 }}>📲</span> Chat on WhatsApp
             </a>
-            <a href="mailto:saqlain.senior21@gmail.com?subject=SchoolTrack JM Demo Request" style={{
+            <a href="mailto:saqlain@schooltrackjm.com?subject=SchoolTrack JM Demo Request" style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
               background: '#f4f6f9', color: DARK, padding: '16px',
               borderRadius: 12, fontWeight: 700, fontSize: 17, textDecoration: 'none',
