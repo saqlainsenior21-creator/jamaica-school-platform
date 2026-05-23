@@ -82,7 +82,7 @@ export default function LandingPage() {
           flexWrap: 'wrap', color: '#fff', textAlign: 'center'
         }}>
           {[
-            { num: '14+', label: 'Schools Using It' },
+            { num: '48+', label: 'Schools Using It' },
             { num: '< 1hr', label: 'Setup Time' },
             { num: '100%', label: 'Web-Based' },
             { num: '24/7', label: 'Always Online' },
