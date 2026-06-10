@@ -13,6 +13,7 @@ import BehaviourPage from './pages/BehaviourPage'
 import ReportsPage from './pages/ReportsPage'
 import SMSPage from './pages/SMSPage'
 import ParentPortal from './pages/ParentPortal'
+import Partner from './pages/Partner'
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
   const { user } = useAuth()
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/" element={<HomeRedirect />} />
+          <Route path="/partner" element={<Partner />} />
           <Route element={<RequireAuth><Layout /></RequireAuth>}>
             <Route path="/moe"        element={<MOEDashboard />} />
             <Route path="/dashboard"  element={<SchoolDashboard />} />
